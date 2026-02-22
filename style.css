@@ -76,3 +76,44 @@ input {
 .box:hover { background: var(--pink); color: #000; transform: translateY(-10px); }
 
 .footer-img { width: 100%; object-fit: cover; }
+/* Container for the 20 Reasons */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Full width like your screenshot */
+    gap: 20px;
+    padding: 20px;
+}
+
+.reason-card {
+    background: #ffb7c5; /* The pink color from your screenshot */
+    color: #222;
+    padding: 30px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
+
+.reason-card:hover {
+    transform: translateY(-5px);
+    background: #ffa4b5;
+}
+
+.heart-icon {
+    font-size: 1.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.reason-text {
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hide branding as requested */
+.nk-branding, .footer-credits {
+    display: none;
+                                   }
