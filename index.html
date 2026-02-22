@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>For My Favorite Person | NK Digital</title>
+    <title>Mrtechnician | Special Surprise</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -14,49 +14,39 @@
     </audio>
 
     <div id="password-screen" class="overlay">
-        <div class="glass-card fade-in">
-            <div class="img-frame">
-                <img src="Screenshot_2026-02-22-17-03-14-462_com.zhiliaoapp.musically-edit.jpg" alt="Birthday Girl" class="profile-thumb">
-            </div>
-            <h2>Unlock Your Surprise</h2>
+        <div class="glass-card animate-pop">
+            <img src="Screenshot_2026-02-22-17-03-14-462_com.zhiliaoapp.musically-edit.jpg" alt="The Birthday Girl" class="profile-pic">
+            <h2>Access Granted Only to Her</h2>
             <p>Hint: Your Birth Date (2060-12-26)</p>
-            <input type="text" id="passwordInput" placeholder="2060-12-26" class="custom-input">
-            <button onclick="checkPassword()" class="unlock-btn">Open My Heart</button>
-        </div>
-    </div>
-
-    <div id="countdown-screen" class="overlay hidden">
-        <div class="glass-card">
-            <h1>The Magic is Loading...</h1>
-            <div id="timer">00:00:00</div>
-            <p>See you at midnight!</p>
+            <input type="text" id="passInput" placeholder="YYYY-MM-DD">
+            <button onclick="unlock()" class="btn-glow">Unlock My Heart</button>
         </div>
     </div>
 
     <div id="main-content" class="hidden">
-        <header class="hero-section">
-            <div class="confetti"></div>
-            <img src="Screenshot_2026-02-22-16-58-27-647_com.zhiliaoapp.musically-edit.jpg" alt="Us" class="main-couple-img">
-            <h1 class="glow-text">Happy Birthday, My Queen</h1>
-        </header>
-
-        <section class="love-letter-section">
-            <div class="letter-container">
-                <p>To the woman who turned my world into a masterpiece. Today isn't just a celebration of your birth; it’s a celebration of every laugh we’ve shared and the beautiful life we’re building. You are my greatest inspiration, my favorite project, and my forever home. I love you endlessly.</p>
-                <p class="sig">— Your Mrtechnician</p>
+        <div class="hero">
+            <img src="Screenshot_2026-02-22-16-58-27-647_com.zhiliaoapp.musically-edit.jpg" alt="Us" class="hero-img">
+            <div class="hero-text">
+                <h1 class="title-animation">Happy Birthday, My Queen</h1>
             </div>
-        </section>
+        </div>
 
-        <section class="grid-section">
-            <h2 class="section-title">20 Reasons I Love You</h2>
-            <div class="reasons-wrapper" id="reasonsGrid">
-                </div>
-        </section>
-        
-        <footer class="final-footer">
-            <img src="Screenshot_2026-02-22-16-59-17-628_com.zhiliaoapp.musically-edit.jpg" alt="Us Together" class="footer-couple-img">
-            <div class="footer-credits">
-                <p>Created with ❤️ by NK Digital Services</p>
+        <div class="letter-section">
+            <div class="envelope">
+                <p>To the woman who turned my world into a masterpiece. Today isn't just a celebration of your birth; it’s a celebration of every laugh we’ve shared and the beautiful life we’re building. You are my greatest inspiration, my favorite project, and my forever home. I love you endlessly.</p>
+                <h3 class="signature">— Your Mrtechnician</h3>
+            </div>
+        </div>
+
+        <div class="reasons-container">
+            <h2 class="title-font">20 Reasons Why You're My Everything</h2>
+            <div class="grid" id="reasonsGrid"></div>
+        </div>
+
+        <footer class="footer-reveal">
+            <img src="Screenshot_2026-02-22-16-59-17-628_com.zhiliaoapp.musically-edit.jpg" alt="Couple Photo" class="footer-img">
+            <div class="branding">
+                <p>Crafted by NK Digital Services</p>
             </div>
         </footer>
     </div>
