@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mrtechnician | Special Surprise</title>
+    <title>Mrtechnician | Birthday Surprise</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
@@ -15,40 +15,56 @@
 
     <div id="password-screen" class="overlay">
         <div class="glass-card animate-pop">
-            <img src="Screenshot_2026-02-22-17-03-14-462_com.zhiliaoapp.musically-edit.jpg" alt="The Birthday Girl" class="profile-pic">
-            <h2>Access Granted Only to Her</h2>
-            <p>Hint: Your Birth Date (2060-12-26)</p>
-            <input type="text" id="passInput" placeholder="YYYY-MM-DD">
+            <div class="profile-container">
+                <img src="Screenshot_2026-02-22-17-03-14-462_com.zhiliaoapp.musically-edit.jpg" alt="Birthday Girl" class="profile-pic">
+            </div>
+            <h2>Private Access</h2>
+            <p>Please enter your birth date to unlock.</p>
+            <input type="text" id="passInput" placeholder="YYYY-MM-DD" autocomplete="off">
             <button onclick="unlock()" class="btn-glow">Unlock My Heart</button>
+            <p class="hint">Hint: 2060-12-26</p>
         </div>
     </div>
 
     <div id="main-content" class="hidden">
-        <div class="hero">
+        
+        <section class="hero">
             <img src="Screenshot_2026-02-22-16-58-27-647_com.zhiliaoapp.musically-edit.jpg" alt="Us" class="hero-img">
-            <div class="hero-text">
-                <h1 class="title-animation">Happy Birthday, My Queen</h1>
+            <div class="hero-overlay">
+                <h1 class="fade-in-text">Happy Birthday, Beautiful</h1>
             </div>
-        </div>
+        </section>
 
-        <div class="letter-section">
-            <div class="envelope">
+        <section class="letter-section">
+            <div class="letter-box">
                 <p>To the woman who turned my world into a masterpiece. Today isn't just a celebration of your birth; it’s a celebration of every laugh we’ve shared and the beautiful life we’re building. You are my greatest inspiration, my favorite project, and my forever home. I love you endlessly.</p>
                 <h3 class="signature">— Your Mrtechnician</h3>
             </div>
-        </div>
+        </section>
 
-        <div class="reasons-container">
-            <h2 class="title-font">20 Reasons Why You're My Everything</h2>
-            <div class="grid" id="reasonsGrid"></div>
-        </div>
+        <section class="reasons-section">
+            <h2 class="section-title">20 Reasons Why I Love You</h2>
+            <p class="instruction">Click each heart to reveal a secret...</p>
+            <div class="grid" id="reasonsGrid">
+                </div>
+        </section>
 
         <footer class="footer-reveal">
-            <img src="Screenshot_2026-02-22-16-59-17-628_com.zhiliaoapp.musically-edit.jpg" alt="Couple Photo" class="footer-img">
-            <div class="branding">
-                <p>Crafted by NK Digital Services</p>
+            <img src="Screenshot_2026-02-22-16-59-17-628_com.zhiliaoapp.musically-edit.jpg" alt="Couple Forever" class="footer-img">
+            <div class="nk-branding">
+                <p>Designed with Love by <strong>NK Digital Services</strong></p>
             </div>
         </footer>
+
+    </div>
+
+    <div id="loveModal" class="modal-overlay hidden">
+        <div class="modal-card">
+            <span class="modal-heart">❤️</span>
+            <h3 id="modalTitle">Reason #1</h3>
+            <p id="modalText">The message goes here.</p>
+            <button onclick="closeModal()" class="close-btn">Close with Love</button>
+        </div>
     </div>
 
     <script src="script.js"></script>
